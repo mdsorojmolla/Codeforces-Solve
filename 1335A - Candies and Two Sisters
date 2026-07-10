@@ -1,0 +1,28 @@
+/* In the name of Allah, the Most Gracious, the Most Merciful */
+#include <stdio.h>
+ 
+int main() {
+	
+    int t; 
+    long long candy, ways;
+ 
+    scanf("%d", &t);
+ 
+    while (t--)
+    {
+        scanf("%lld", &candy);
+        
+        if (candy%2==0)
+        {
+            ways= (candy/2)-1;
+            printf("%lld\n", ways);
+        }
+ 
+        else 
+        {
+            ways=candy/2;
+            printf("%lld\n", ways);
+        }
+    }
+    return 0;
+}
