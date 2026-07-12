@@ -1,0 +1,39 @@
+/* In the name of Allah, the Most Gracious, the Most Merciful */
+
+#include <stdio.h>
+
+int main() {
+	
+    int t, m, c;
+    int count_m=0, count_c=0;
+    scanf("%d", &t);
+
+    while (t--)
+    {
+        scanf("%d %d", &m, &c);
+
+        if (m>c)
+        {
+            count_m ++;
+        }
+        else if (c>m)
+        {
+            count_c ++;
+        }
+    }
+
+    if (count_m>count_c)
+    {
+        printf("Mishka\n");
+    }
+    else if (count_m == count_c)
+    {
+        printf("Friendship is magic!^^\n");
+    }
+
+    else 
+    {
+        printf("Chris\n");
+    }
+    return 0;
+}
