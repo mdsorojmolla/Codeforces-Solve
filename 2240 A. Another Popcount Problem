@@ -1,0 +1,35 @@
+#include <stdio.h>
+ 
+int main() {
+    int t;
+    if (scanf("%d", &t) == 1) {
+        while (t--) {
+            long long n, k;
+            scanf("%lld %lld", &n, &k);
+ 
+            long long total_popcount = 0;
+            long long bit_position = 0;
+ 
+            while (n > 0) {
+                long long cost = 1LL << bit_position;
+                
+                if (cost > n) {
+                    break;
+                }
+ 
+                long long affordable = n / cost;
+                long long buy = (affordable < k) ? affordable : k;
+ 
+                if (buy == 0) {
+                    break;
+                }
+ 
+                total_popcount += buy;
+                n -= buy*cost;
+                bit_position++;
+            }
+            printf("%lld\n", total_popcount);
+        }
+    }
+    return 0;
+}
