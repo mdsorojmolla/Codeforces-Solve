@@ -1,0 +1,18 @@
+/* In the name of Allah, the Most Gracious, the Most Merciful */
+#include <stdio.h>
+ 
+int main() {
+    int t;
+    scanf("%d",&t);
+    double sum=0.00;
+    int n;
+    
+    for (int i=0; i<t; i++) {
+        scanf("%d", &n); 
+        sum=sum+n;
+    }
+    
+    double avg = sum/t; 
+    printf("%.12f\n", avg);
+    return 0;
+}
