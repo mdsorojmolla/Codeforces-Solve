@@ -1,0 +1,44 @@
+/* In the name of Allah, the Most Gracious, the Most Merciful */
+#include <stdio.h>
+
+int main() {
+    int w, y, max, favor;
+
+    scanf("%d %d", &y, &w);
+
+    if (y>w)
+    {
+        max = y;
+        favor = (6-max)+1;
+    }
+    else 
+    {
+        max = w;
+        favor = (6-max)+1;
+    }
+
+    if (favor == 0)
+    {
+        printf("0/1\n");
+    }
+    
+    else if (favor == 6)
+    {
+        printf("1/1\n");
+    }
+    
+    else if (favor%2==0)
+    {
+        printf("%d/%d\n", favor/2, 6/2);
+    }
+
+    else if (favor%3==0)
+    {
+        printf("%d/%d\n", favor/3, 6/3);
+    }
+    else 
+    {
+        printf("%d/%d\n", favor, 6);
+    }
+    return 0;
+}
