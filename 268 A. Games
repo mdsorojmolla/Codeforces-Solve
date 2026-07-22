@@ -1,0 +1,33 @@
+/* In the name of Allah, the Most Gracious, the Most Merciful */
+#include <stdio.h>
+
+int main() {
+    
+    int n, count=0;
+
+    scanf("%d", &n);
+    
+    int home_jersey[n];
+    int away_jersey[n];
+
+    for (int i=0; i<n; i++)
+    {
+        scanf("%d %d", &home_jersey[i], &away_jersey[i]);
+    }
+
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<n; j++)
+        {
+            if (home_jersey[i] == away_jersey [j])
+            {
+                count ++;
+            }
+        }
+    }
+
+    printf("%d\n", count);
+
+    
+    return 0;
+}
